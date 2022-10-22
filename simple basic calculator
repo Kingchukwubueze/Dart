@@ -1,0 +1,22 @@
+import 'dart:io';
+
+dynamic prompt(promptText) {
+  print(promptText);
+  var answer = stdin.readLineSync();
+  return answer;
+}
+
+void main(List<String> args) {
+  var prompt1 = int.parse(prompt("enter first number"));
+  var prompt2 = int.parse(prompt("enter another number"));
+  var op = prompt("enter an operator +,*,-,/");
+  if (op == "+") {
+    print(prompt1 + prompt2);
+  } else if (op == "-") {
+    print(prompt2 - prompt1);
+  } else if (op == "*") {
+    print(prompt2 * prompt1);
+  } else if (op == "/") {
+    print(prompt2 / prompt1);
+  }
+}
