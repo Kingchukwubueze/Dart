@@ -1,0 +1,29 @@
+import 'dart:io';
+
+dynamic prompt(promptText) {
+  print(promptText);
+  var answer = stdin.readLineSync();
+  return answer;
+}
+
+class Quiz {
+  var Question;
+  var reply;
+
+  Quiz(var Question, var reply) {
+    this.Question = Question;
+    this.reply = reply;
+  }
+}
+
+void main(List<String> args) {
+  List<Quiz> questions = [Quiz("5*3", 15), Quiz("5*2", 10), Quiz("5*4", 20)];
+  int score = 0;
+  for (Quiz element in questions) {
+    var feedback = prompt(element.Question);
+    if (feedback == element.reply) {
+      score++;
+    }
+  }
+  print("you got $score out of ${questions.length}");
+}
