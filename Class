@@ -1,0 +1,39 @@
+import 'dart:io';
+
+class Car {
+  var name;
+  var engine;
+  var year;
+  var model;
+
+  Car(var name, var engine, var year, var model) {
+    this.name = name;
+    this.engine = engine;
+    this.year = year;
+    this.model = model;
+  }
+
+  printName() {
+    return name;
+  }
+
+  printYear() {
+    return year;
+  }
+
+  printModel() {
+    return model;
+  }
+
+  printEngine() {
+    return engine;
+  }
+}
+
+void main(List<String> args) {
+  Car Lexus = Car("lexus", "v8", 2011, "rx300");
+  print(Lexus.printEngine());
+  print(Lexus.printName());
+  print(Lexus.printModel());
+  print(Lexus.printYear());
+}
