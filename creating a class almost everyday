@@ -1,0 +1,26 @@
+class Person {
+  var vehicle;
+
+  Person(this.vehicle);
+}
+
+void main(List<String> args) {
+  Person peter = Person("bike");
+  Person mike = Person("car");
+
+  if (peter.vehicle == "bike") {
+    print(r"your fee is $10");
+  } else if (peter.vehicle == "car") {
+    print(r"your fee is $20 ");
+  } else if (peter.vehicle == "bus") {
+    print(r"your fee is $30");
+  }
+
+  if (mike.vehicle == "bike") {
+    print(r"your fee is $10");
+  } else if (mike.vehicle == "car") {
+    print(r"your fee is $20 ");
+  } else if (mike.vehicle == "bus") {
+    print(r"your fee is $30");
+  }
+}
