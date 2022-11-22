@@ -1,0 +1,21 @@
+main() => runApp(MaterialApp(home: test()));
+
+class test extends StatelessWidget {
+  const test({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: (Text("Stateless widget for 3  days, (1 hour) must!!")),
+          centerTitle: true,
+          backgroundColor: Colors.red[600],
+        ),
+        body: Image(image: AssetImage("assestFolder/assests1.jpeg")),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (() {}),
+          child: (Text("choose")),
+          backgroundColor: Colors.black26,
+        ));
+  }
+}
